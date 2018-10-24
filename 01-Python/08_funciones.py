@@ -122,5 +122,15 @@ def agregar_a_archivo(path, *lineas_a_escribir):
         print("No se pudo leer")
 
 
-agregar_a_archivo('./08_archivo.txt', "hola", "esta", "bien")
+#agregar_a_archivo('./08_archivo.txt', "hola", "esta", "bien")
 leer_archivo('./08_archivo.txt')
+
+
+#lambda
+elevar_al_cuadrado = lambda numero: numero*numero
+print(elevar_al_cuadrado(3))
+
+sumar_dos_num = lambda n, m: n+m
+print(sumar_dos_num(3, 2))
+
+
