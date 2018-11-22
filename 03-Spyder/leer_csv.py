@@ -29,3 +29,4 @@ data_frame_artwork.shape
 PATH_A_GUARDAR ="C://Users//Carolina//Documents//GitHub//calderon-mena-diana-carolina//03-Spyder//data//artwork_data_frame.pickle"
 data_frame_artwork.to_pickle(PATH_A_GUARDAR)
 
+
