@@ -14,13 +14,14 @@ CSV_PATH = "C://Users//Carolina//Documents//GitHub//calderon-mena-diana-carolina
 #leer archivos binarios
 #leer relational database
 
-data_frame_artwork = pd.read_csv(CSV_PATH, nrows = 5, 
+data_frame_artwork = pd.read_csv(CSV_PATH, 
                                  index_col='id', 
                                  )
 
-columnas_a_utilizar =  ['id','artist', 'title','medium', 'year','medium']
+columnas_a_utilizar =  ['id','artist', 'title','medium', 'year','medium', 'height', 'width']
 
-data_frame_artwork = pd.read_csv(CSV_PATH, index_col='id', usecols =columnas_a_utilizar, nrows = 100)
+data_frame_artwork = pd.read_csv(CSV_PATH, index_col='id', 
+                             low_memory=False, usecols =columnas_a_utilizar)
 
 
 
