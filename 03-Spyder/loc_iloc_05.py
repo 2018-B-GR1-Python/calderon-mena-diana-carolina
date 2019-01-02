@@ -55,10 +55,12 @@ artwork = [09393, 'Black', 'Sun', 'Lienzo', 2009, 300,700,9999]
 
 ##definir columnas
 columnas_art = list(df)
-columnas_art.insert(0,'id')
+columnas_art.insert(0,'Index')
 
 nuevo_dato =  pd.Series(artwork, index=columnas_art)
 df2 = df.append(nuevo_dato, ignore_index=True)
 
 dfaux=pd.DataFrame(nuevo_dato).transpose();
-df2=df.append(dfaux, sort=True)
+dfaux = dfaux.set_index('Index')
+
+df2=df.append(dfaux)
