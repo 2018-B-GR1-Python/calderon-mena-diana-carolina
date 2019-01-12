@@ -21,12 +21,11 @@ class MiPrimerSpider(scrapy.Spider):
         # precio css
         # stock xpath
 
-        print(response.css('a::attr(title)').extract())
+
         nombreLibro =response.css('a::attr(title)').extract()
-        print(response.css('article > div > p > product_price::text').extract())
-        stockLibro = response.xpath("// div / div / div / div / section / div / ol / li/ article / div / p / text()").extract()
-        print(stockLibro)
-        agregar_a_archivo(nombre_archivo, nombreLibro, stockLibro)
+        precioLibro=response.css('article > div > p > product_price::text').extract()
+        stockLibro = response.xpath("//div/div/div/div/section/div/ol/li/article/div/p/text()").extract()
+        agregar_a_archivo(nombre_archivo, nombreLibro, stockLibro, precioLibro)
 
 
 
@@ -38,4 +37,4 @@ def agregar_a_archivo(path, *lineas_a_escribir):
 
         archivo_abierto.close()
     except Exception:
-        print("No se pudo leer")
+        print("")
